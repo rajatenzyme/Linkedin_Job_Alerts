@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search Query Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .form-group input[type="submit"] {
+      background: #5cb85c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .form-group input[type="submit"]:hover {
+      background: #4cae4c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Job Search Query Form</h2>
+    <form action="/submit" method="POST">
+      <div class="form-group">
+        <label for="keyword">Keyword</label>
+        <input type="text" id="keyword" name="keyword" value="SDE" required>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" value="Bengaluru" required>
+      </div>
+      <div class="form-group">
+        <label for="dateSincePosted">Date Since Posted</label>
+        <select id="dateSincePosted" name="dateSincePosted" required>
+          <option value="past week">Past Week</option>
+          <option value="past month">Past Month</option>
+          <option value="24hr">Last 24 Hr</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="jobType">Job Type</label>
+        <select id="jobType" name="jobType" required>
+          <option value="full time">Full Time</option>
+          <option value="part time">Part Time</option>
+          <option value="internship">Internship</option>
+          <option value="contract">Contract</option>
+          <option value="temporary">Temporary</option>
+          <option value="volunteer">Volunteer</option>
+          
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="remoteFilter">Remote Filter</label>
+        <select id="remoteFilter" name="remoteFilter" required>
+          <option value="remote">Remote</option>
+          <option value="on-site">On-site</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="number" id="salary" name="salary" value="100000" required>
+      </div>
+      <div class="form-group">
+        <label for="experienceLevel">Experience Level</label>
+        <select id="experienceLevel" name="experienceLevel" required>
+          <option value="entry level">Entry Level</option>
+          <option value="mid level">Mid Level</option>
+          <option value="senior level">Senior Level</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="limit">Limit</label>
+        <input type="number" id="limit" name="limit" value="10" required>
+      </div>
+      <div class="form-group">
+        <label for="sortBy">Sort By</label>
+        <select id="sortBy" name="sortBy" required>
+          <option value="recent">Recent</option>
+          <option value="relevant">Relevant</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
